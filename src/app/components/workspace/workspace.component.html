@@ -1,0 +1,13 @@
+<div class="workspace">
+    <app-menu class="menu-container" [notes]="notes" (selectEvent)="selectNote($event)">
+
+    </app-menu>
+    <app-add-note *ngIf="newNote; else note" class="note-container">
+
+    </app-add-note>
+    <ng-template #note>
+        <app-note class="note-container" [note]="selectedNote">
+
+        </app-note>
+    </ng-template>
+</div>

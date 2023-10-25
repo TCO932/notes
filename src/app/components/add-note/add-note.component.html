@@ -1,0 +1,8 @@
+<form [formGroup]="noteForm">
+    <label for="title">Title: </label>
+    <input id="title" type="text" formControlName="title">
+
+    <label for="text">Text: </label>
+    <input id="text" type="text" formControlName="text">
+    <button type="button" (click)="addNote()">Добавить</button>
+</form>

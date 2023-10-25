@@ -1,0 +1,21 @@
+$menuWidth: 30%;
+
+.workspace {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.menu-container {
+    box-sizing: border-box;
+    width: $menuWidth;
+    height: 100%;
+    max-height: 100%;
+    border-right: 2px black solid;
+}
+
+.note-container {
+    box-sizing: border-box;
+    width: calc(100% - #{$menuWidth});
+    height: 100%;
+}
