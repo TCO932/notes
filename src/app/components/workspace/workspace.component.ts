@@ -37,13 +37,13 @@ export class WorkspaceComponent implements OnInit {
     this.notes = [...this.noteGen(20)]
     this.route.queryParamMap.subscribe(params => {
       const noteId = +params.get('id');
-      this.newNote = !!params.get('new') ?? true;
+      this.newNote = !!params.get('new');
       console.log(this.newNote)
       this.selectNoteById(noteId)
     });
     let timerId = setInterval(() => {
       // this.selectedNote = this.notes[Math.floor(Math.random() * this.notes.length)]
-      console.log(this.selectedNote)
+      // console.log(this.newNote)
     }, 2000);
     
   }
@@ -60,7 +60,11 @@ export class WorkspaceComponent implements OnInit {
 
   *noteGen(n) {
     for(let i = 1; i <= n; i++)
-      yield {id: i, title: 'title' + i, text: 'text' + i};
+      yield {
+        id: i, 
+        title: 'title' + i, 
+        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et temporibus, voluptate eum nulla reiciendis ad laudantium similique quas voluptatem corporis dolorem excepturi qui dolores optio facere suscipit. Libero, laboriosam sunt.'.repeat(i)
+      };
 }
 
 }
