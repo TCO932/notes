@@ -1,7 +1,9 @@
 <div class="toolbar">
   <span class="title">Мои заметки</span>
   <div class="spacer"></div>
-  <a [routerLink]="['/new-note']" [queryParams]="{new: true}">Новая заметка</a>
+  <button class="add-btn btn" (click)="createNode()">
+    Добавить заметку
+  </button>
 </div>
 
 <div class="content">

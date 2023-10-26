@@ -6,8 +6,7 @@ import { NoteComponent } from './components/note/note.component';
 
 
 const routes: Routes = [
-  { path: 'notes/:id:new', component: NoteComponent },
-  { path: 'new-note', component: AddNoteComponent },
+  { path: 'notes/:id', component: AppComponent },
   { path: '**', redirectTo: 'notes/' },
 ];
 

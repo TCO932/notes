@@ -8,7 +8,7 @@ import { Note } from 'src/app/interfaces';
   styleUrls: ['./add-note.component.scss']
 })
 export class AddNoteComponent implements OnInit {
-  @Input() note: Note =  {id: 0, title: '', text: ''}
+  @Input() note: Note =  {id: '', title: '', text: ''}
   @Output() addEvent = new EventEmitter<Note>();
 
   public noteForm = new FormGroup({
@@ -22,9 +22,7 @@ export class AddNoteComponent implements OnInit {
   }
   
   addNote() {
-    // get note data from form
     const noteData = this.noteForm.value;
-    console.log(noteData)
     this.addEvent.emit(noteData);
   }
 }

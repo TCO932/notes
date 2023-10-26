@@ -18,7 +18,8 @@ $menuWidth: 30%;
 .note-container {
     box-sizing: border-box;
     width: calc(100% - #{$menuWidth});
-    overflow-y: scroll;
+    overflow-y: auto;
+    padding: 1.5rem;
     max-height: 100%;
     height: 100%;
 }

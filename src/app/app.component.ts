@@ -1,4 +1,6 @@
+import { createContentChild } from '@angular/compiler/src/core';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'notes';
+  constructor(
+    private router: Router,
+  ) {}
+
+  createNode() {
+    this.router.navigate(["/notes/"]);
+  }
 }

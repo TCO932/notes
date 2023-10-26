@@ -1,13 +1,11 @@
 <form class="form-container" [formGroup]="noteForm">
-    <p>
-        <label for="title">Title: </label>
-        <input id="title" type="text" formControlName="title">
-    </p>
-    <p>
-        <label for="text">Text: </label>
-        <input id="text" type="text" formControlName="text">
-    </p>
-    <p>
-        <button type="button" (click)="addNote()">Добавить</button>
-    </p>
+    <div class="title-container">
+        <input id="title" class="title-input" type="text" formControlName="title" placeholder="Название">
+    </div>
+    <div class="text-container">
+        <textarea id="text" class="text-input" wrap="hard" formControlName="text" placeholder="Текст"></textarea>
+    </div>
+    <div class="btn-container">
+        <button class="btn" type="button" (click)="addNote()">Добавить</button>
+    </div>
 </form>

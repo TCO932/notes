@@ -7,7 +7,7 @@ import { Note } from 'src/app/interfaces';
   styleUrls: ['./note.component.scss']
 })
 export class NoteComponent implements OnInit {
-  @Input() note: Note = {id: 0, title: '', text: ''}
+  @Input() note: Note = {id: '', title: '', text: ''}
   
   constructor() { }
 
